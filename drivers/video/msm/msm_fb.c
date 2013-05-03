@@ -3047,7 +3047,9 @@ static int msm_fb_ioctl(struct fb_info *info, unsigned int cmd,
 
 
 	case MSMFB_DISPLAY_COMMIT:
-case 0x40a46da4:
+	
+	case 0x40A46DA4: //this is MSMFB_DISPLAY_COMMIT for our device
+	
 		ret = msmfb_display_commit(info, argp);
 		break;
 
@@ -3090,7 +3092,7 @@ case 0x40a46da4:
 		break;
 
 	default:
-		MSM_FB_INFO("MDP: unknown ioctl (cmd=%x) received!\n", cmd);
+		printk("MDP: unknown ioctl (cmd=%x) received!\n", cmd);
 		ret = -EINVAL;
 		break;
 	}
