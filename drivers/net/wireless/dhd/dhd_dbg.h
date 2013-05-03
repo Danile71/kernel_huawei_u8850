@@ -27,7 +27,7 @@
 #ifndef _dhd_dbg_
 #define _dhd_dbg_
 
-#if 1 
+#if 0
 
 #define DHD_ERROR(args)	        do {printf args;} while (0)
 #define DHD_TRACE(args)		do { printf args;} while (0)
