@@ -1,11 +1,8 @@
 # Makefile for the Linux device tree
 
-<<<<<<< HEAD
-obj-y			:= core.o sys.o bus.o dd.o \
-=======
+
 obj-y			:= core.o sys.o bus.o dd.o sync.o sw_sync.o\
->>>>>>> 2.6.35-ics-jb
-			   driver.o class.o platform.o \
+		 driver.o class.o platform.o \
 			   cpu.o firmware.o init.o map.o devres.o \
 			   attribute_container.o transport_class.o
 obj-$(CONFIG_DEVTMPFS)	+= devtmpfs.o

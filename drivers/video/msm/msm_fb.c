@@ -108,16 +108,14 @@ static int msm_fb_suspend_sub(struct msm_fb_data_type *mfd);
 static int msm_fb_ioctl(struct fb_info *info, unsigned int cmd,
 			unsigned long arg);
 static int msm_fb_mmap(struct fb_info *info, struct vm_area_struct * vma);
-<<<<<<< HEAD
 
-=======
 struct sync_pt *sw_sync_pt_create(struct sw_sync_timeline *obj, u32 value);
 struct sync_fence *sync_fence_create(const char *name, struct sync_pt *pt);
 extern void sync_pt_free(struct sync_pt *pt);
 extern int get_unused_fd_flags(unsigned flags);
 extern void sync_fence_install(struct sync_fence *fence, int fd);
 extern void sync_fence_put(struct sync_fence *fence);
->>>>>>> 2.6.35-ics-jb
+
 #ifdef MSM_FB_ENABLE_DBGFS
 
 #define MSM_FB_MAX_DBGFS 1024
@@ -141,11 +139,10 @@ struct dentry *msm_fb_get_debugfs_root(void)
 	if (msm_fb_debugfs_root == NULL)
 		msm_fb_debugfs_root = debugfs_create_dir("msm_fb", NULL);
 
-<<<<<<< HEAD
-=======
+
 	/* Only one released fd for now, -1 indicates an end */
 	//buf_fence->rel_fen_fd[1] = -1;
->>>>>>> 2.6.35-ics-jb
+
 	return msm_fb_debugfs_root;
 }
 
@@ -2725,8 +2722,7 @@ static int msmfb_notify_update(struct fb_info *info, unsigned long *argp)
 	}
 	return 0;
 }
-<<<<<<< HEAD
-=======
+
 struct sync_fence *sync_fence_fdget(int fd);
 static int buf_fence_process(struct msm_fb_data_type *mfd,
 						struct mdp_buf_fence *buf_fence)
@@ -2819,7 +2815,7 @@ static int msmfb_display_commit(struct fb_info *info,
 	return ret;
 }
 
->>>>>>> 2.6.35-ics-jb
+
 
 static int msm_fb_ioctl(struct fb_info *info, unsigned int cmd,
 			unsigned long arg)
@@ -3049,8 +3045,7 @@ static int msm_fb_ioctl(struct fb_info *info, unsigned int cmd,
 				return ret;
 		break;
 
-<<<<<<< HEAD
-=======
+
 	case MSMFB_DISPLAY_COMMIT:
 case 0x40a46da4:
 		ret = msmfb_display_commit(info, argp);
@@ -3058,7 +3053,6 @@ case 0x40a46da4:
 
 
 
->>>>>>> 2.6.35-ics-jb
 	case MSMFB_NOTIFY_UPDATE:
 		ret = msmfb_notify_update(info, argp);
 		break;

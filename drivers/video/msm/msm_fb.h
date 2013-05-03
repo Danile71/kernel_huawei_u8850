@@ -63,12 +63,7 @@
 #define MFD_KEY  0x11161126
 #define MSM_FB_MAX_DEV_LIST 32
 
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 2.6.35-ics-jb
 struct disp_info_type_suspend {
 	boolean op_enable;
 	boolean sw_refreshing_enable;
@@ -153,9 +148,7 @@ struct msm_fb_data_type {
 	__u32 var_xres;
 	__u32 var_yres;
 	__u32 var_pixclock;
-<<<<<<< HEAD
 
-=======
  struct sw_sync_timeline *timeline;
 struct mutex sync_mutex;
  struct sync_fence *last_acq_fen[MDP_MAX_FENCE_FD];
@@ -167,7 +160,7 @@ int timeline_value;
         struct sync_pt *cur_rel_sync_pt;
         struct sync_fence *cur_rel_fence;
         struct sync_fence *last_rel_fence;
->>>>>>> 2.6.35-ics-jb
+
 #ifdef MSM_FB_ENABLE_DBGFS
 	struct dentry *sub_dir;
 #endif

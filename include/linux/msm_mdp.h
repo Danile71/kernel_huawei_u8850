@@ -68,20 +68,18 @@
 						struct msmfb_data)
 #define MSMFB_WRITEBACK_TERMINATE _IO(MSMFB_IOCTL_MAGIC, 155)
 
-<<<<<<< HEAD
-=======
+
 
 
 #define MSMFB_DISPLAY_COMMIT      _IOW(MSMFB_IOCTL_MAGIC, 164, \
 						struct mdp_display_commit)
 #define MDP_MAX_FENCE_FD	10
->>>>>>> 2.6.35-ics-jb
+
 #define FB_TYPE_3D_PANEL 0x10101010
 #define MDP_IMGTYPE2_START 0x10000
 #define MSMFB_DRIVER_VERSION	0xF9E8D701
 
-<<<<<<< HEAD
-=======
+
 struct mdp_buf_fence {
 	uint32_t flags;
 	uint32_t acq_fen_fd_cnt;
@@ -96,7 +94,7 @@ struct mdp_display_commit {
 	struct mdp_buf_fence buf_fence;
 };
 
->>>>>>> 2.6.35-ics-jb
+
 enum {
 	NOTIFY_UPDATE_START,
 	NOTIFY_UPDATE_STOP,
