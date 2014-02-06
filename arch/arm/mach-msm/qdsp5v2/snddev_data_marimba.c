@@ -345,8 +345,8 @@ static struct snddev_icodec_data snddev_ihs_stereo_rx_data = {
 	.property = SIDE_TONE_MASK,
 	.max_voice_rx_vol[VOC_NB_INDEX] = -700,
 	.min_voice_rx_vol[VOC_NB_INDEX] = -2200,
-	.max_voice_rx_vol[VOC_WB_INDEX] = -900,
-	.min_voice_rx_vol[VOC_WB_INDEX] = -2400
+	.max_voice_rx_vol[VOC_WB_INDEX] = -300,
+	.min_voice_rx_vol[VOC_WB_INDEX] = -1800
 };
 
 static struct platform_device msm_ihs_stereo_rx_device = {
@@ -386,8 +386,8 @@ static struct snddev_icodec_data snddev_ihs_mono_rx_data = {
 	.property = SIDE_TONE_MASK,
 	.max_voice_rx_vol[VOC_NB_INDEX] = -700,
 	.min_voice_rx_vol[VOC_NB_INDEX] = -2200,
-	.max_voice_rx_vol[VOC_WB_INDEX] = -900,
-	.min_voice_rx_vol[VOC_WB_INDEX] = -2400,
+	.max_voice_rx_vol[VOC_WB_INDEX] = -300,
+	.min_voice_rx_vol[VOC_WB_INDEX] = -1800,
 
 };
 
@@ -686,10 +686,10 @@ static struct snddev_icodec_data snddev_ispeaker_rx_data = {
 		.max_voice_rx_vol[VOC_WB_INDEX] = -300,      
 		.min_voice_rx_vol[VOC_WB_INDEX] = -2100,    
 	#elif defined CONFIG_FIH_PROJECT_SF8
-		.max_voice_rx_vol[VOC_NB_INDEX] = -400,     //MM-RC-SF8audiotuning-01*
-		.min_voice_rx_vol[VOC_NB_INDEX] = -1900,   //MM-RC-SF8audiotuning-01*
-		.max_voice_rx_vol[VOC_WB_INDEX] = -400,    //MM-RC-SF8audiotuning-01*  
-		.min_voice_rx_vol[VOC_WB_INDEX] = -1900,   //MM-RC-SF8audiotuning-01*
+		.max_voice_rx_vol[VOC_NB_INDEX] = 1000,     //MM-RC-SF8audiotuning-01*
+		.min_voice_rx_vol[VOC_NB_INDEX] = -500,   //MM-RC-SF8audiotuning-01*
+		.max_voice_rx_vol[VOC_WB_INDEX] = 100,    //MM-RC-SF8audiotuning-01*  
+		.min_voice_rx_vol[VOC_WB_INDEX] = -500,   //MM-RC-SF8audiotuning-01*
 	#else
 		.max_voice_rx_vol[VOC_NB_INDEX] = 0,
 		.min_voice_rx_vol[VOC_NB_INDEX] = -2400,
@@ -1695,8 +1695,8 @@ static struct snddev_icodec_data snddev_ihs_stereo_speaker_stereo_rx_data = {
 	.voltage_off = msm_snddev_hsed_voltage_off,
 	.max_voice_rx_vol[VOC_NB_INDEX] = -500,
 	.min_voice_rx_vol[VOC_NB_INDEX] = -2000,
-	.max_voice_rx_vol[VOC_WB_INDEX] = -500,
-	.min_voice_rx_vol[VOC_WB_INDEX] = -2000,
+	.max_voice_rx_vol[VOC_WB_INDEX] = -300,
+	.min_voice_rx_vol[VOC_WB_INDEX] = -1800,
 };
 
 static struct platform_device msm_ihs_stereo_speaker_stereo_rx_device = {
